@@ -1,0 +1,11 @@
+.aside{
+   display:flex;
+   flex-direction:column;
+   justify-content:center;
+   align-items:center;
+   width:100px;
+   height:100%;
+   background:black;
+   order:1;
+}
+
