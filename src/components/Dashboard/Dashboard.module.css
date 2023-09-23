@@ -1,0 +1,22 @@
+.dashboardSection{
+  display:flex;
+  flex-direction:column;
+  width:100%;
+  padding:20px;
+}
+
+.welcomecontainer{
+  height:10%;
+  display:flex;
+}
+
+.welcomeMsg{
+  display:flex;
+  align-items:center;
+  font-size:2rem;
+}
+
+.lastName{
+  color:red;text-transform: capitalize;
+}
+

@@ -1,24 +1,27 @@
-
 import Header from "../../components/header/header.jsx";
 import style from "./ProfilePage.module.css";
 import { Navigate, useParams } from "react-router-dom";
+import MainProfile from "./MainProfilePage/MainProfile";
+
+
+  const AvailableIds = [12, 18];
+
+
 
 export default function ProfilePage() {
-    const  {id}  = useParams('id')
-    console.log(id)
-    const AvailableIds = [12,18]
-    const isExist = AvailableIds.includes(Number(id));
-    console.log(isExist)
+  const { id } = useParams("id");
+  const isExist = AvailableIds.includes(Number(id));
+    
 
-
-  if (isExist){
+  if (isExist) {
+    
     return (
       <div className={style.profilePage}>
         <Header />
-        <h1>ProfilePage</h1>
+        <MainProfile id={id}  />
       </div>
-    )
+    );
   } else {
-  return <Navigate to='/404'/>
-}
+    return <Navigate to="/404" />;
+  }
 }

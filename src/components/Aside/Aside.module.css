@@ -2,10 +2,10 @@
    display:flex;
    flex-direction:column;
    justify-content:center;
-   align-items:center;
-   width:100px;
+   align-items:flex-start;
+   width:70px;
    height:100%;
    background:black;
-   order:1;
+   order:0;
 }
 

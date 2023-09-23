@@ -22,10 +22,11 @@ export default function Aside(){
     {
       'name': 'bicycle',
       'image': bicycle
-    }]
+    }]; 
+
   return (
     <aside className={style.aside} >
-      {activities.forEach((activity) => {
+      {activities.map((activity) => {
         const { name,image} = activity;
         return (
         <ActivityButton key={Math.random()} activity={name} icon={image} />
