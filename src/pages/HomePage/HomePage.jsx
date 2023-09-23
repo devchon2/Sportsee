@@ -1,5 +1,5 @@
-import Header from "../../components/header/header.jsx";
-import MainHomePage from "./mainHomePage.jsx";
+import Header from "../../components/header/header"
+import MainHomePage from "./MainHomePage/mainHomePage";
 import style from "./HomePage.module.css";
 
 export default function HomePage() {
@@ -7,7 +7,6 @@ export default function HomePage() {
     <div className={style.homePage}>
       <Header />
       <MainHomePage />
-      
     </div>
   );
 }

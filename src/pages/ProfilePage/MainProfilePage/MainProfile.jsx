@@ -6,14 +6,15 @@ import getProfile from '../../../Services/ProfileRequest.js';
 
  
 
-export default function MainProfile({id}){
-  const [profile, setProfile] = useState(null);
-  
+export default  function MainProfile({id, type}){
+    const sourceType = type === 'mock' ? 'mock' : 'api'
+const [profile, setProfile] = useState(getProfile(id,sourceType))
+console.log(sourceType)
   useEffect(() => {
-     getProfile(id,'mock').then((profil) => {
+     getProfile(id,sourceType).then((profil) => {
        setProfile(profil);
      });
-    }, [id]);
+    },[sourceType,id]);
 
  
  return (

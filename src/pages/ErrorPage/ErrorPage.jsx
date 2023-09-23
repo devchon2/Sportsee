@@ -1,10 +1,12 @@
-import Header from "../../components/header/header.jsx";
+import Header from "../../components/header/header";
+import MainErrorPage from './MainErrorPage/MainErrorPage';
+import style from './ErrorPage.module.css'
 
 export default function ErrorPage() {
   return (
-    <>
+    <div className={style.ErrorPage}>
       <Header />
-      <h1>ERROR PAGE</h1>
-    </>
+      <MainErrorPage />
+    </div>
   );
 }

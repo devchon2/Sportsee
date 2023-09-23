@@ -1,0 +1,25 @@
+.mainErrorPage{
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  height:100%;
+  background-color:black
+}
+
+.errorTitle{
+  display:flex;
+  margin:20px;
+  align-items:baseline;
+  color:white;
+}
+
+.errorType{
+  color:red;
+  font-size:320%;
+  margin-left:20px;
+}
+
+.oups{
+  color:white;
+}
