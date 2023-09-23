@@ -1,9 +1,17 @@
-.dashboardSection{
+.dashboardContainer{
   display:flex;
   flex-direction:column;
   width:100%;
   padding:20px;
 }
+
+
+.GraphsSection{
+  display:flex;
+  flex-direction:column;
+  width:100%;
+}
+
 
 .welcomecontainer{
   height:10%;
@@ -19,4 +27,3 @@
 .lastName{
   color:red;text-transform: capitalize;
 }
-

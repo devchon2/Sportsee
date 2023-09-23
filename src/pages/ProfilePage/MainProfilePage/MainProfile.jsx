@@ -19,9 +19,7 @@ export default function MainProfile({id}){
  return (
   <section className={style.mainSection}>
     <Aside />
-    
-    <Dashboard id={id} datas={profile}/>
-
+    <Dashboard id={id} profil={profile}/>
   </section>
 
  )
