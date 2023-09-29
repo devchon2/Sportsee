@@ -5,6 +5,8 @@ import style from "./Dashboard.module.css";
 import getProfile from "../../Services/ProfileRequest.js";
 import { useState, useEffect } from "react";
 import RadarCharts from "./RadarChart/Radarchart.jsx";
+import LineChartComponent from "./LineChart/LineChart.jsx";
+import RadialChartComponent from "./RadialChart/Radialchart.jsx";
 
 export default function Dashboard({ id }) {
   const type = "api";
@@ -20,7 +22,7 @@ export default function Dashboard({ id }) {
 
 
   console.log(profil)
-const { formatedAverage, formatedSessions, keydata,score, firstName, activities } = profil
+const { formatedAverage, formatedSessions, keydata,score, firstName, formatedActivities } = profil
 
 
 
@@ -32,7 +34,9 @@ const { formatedAverage, formatedSessions, keydata,score, firstName, activities 
           <BarChartContainer activities={formatedSessions} />
 
           <div className={style.graphSectionDown}>
-            <RadarCharts data={activities} />
+            <LineChartComponent data={formatedAverage}/>
+            <RadarCharts data={formatedActivities} />
+            <RadialChartComponent data={score} />
           </div>
         </div>
         <div className={style.keyDatasContainer}>keydatasContainer</div>

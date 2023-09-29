@@ -36,6 +36,7 @@
 
 .graphSectionDown{
   display:flex;
+  justify-content:space-between;
   height:50%;
   width:100%
 }

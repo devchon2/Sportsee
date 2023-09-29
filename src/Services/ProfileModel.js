@@ -11,7 +11,7 @@ export default class ProfileModel {
     this.age = this.personalsInfos.age
     
         //récupération des informations de Score
-    this.score = userDatas[0].score ? userDatas[0].score : userDatas[0].todayScore 
+    this.score = [{ name : 'score', value: userDatas[0].score ? userDatas[0].score : userDatas[0].todayScore }]
 
     //récupération des informations de KeyData
     this.keyData = userDatas[0].keyData
@@ -42,6 +42,17 @@ export default class ProfileModel {
     
     //récupération des informations de Activity
     this.activities = userDatas[1]
+    this.formatedActivities = [
+      {kind: this.activities[1]},
+      {kind: this.activities[2]},
+      {kind: this.activities[3]},
+      {kind: this.activities[4]},
+      {kind: this.activities[5]},
+      {kind: this.activities[6]}
+    ]
+
+    console.log('test activity', this.formatedActivities)
+
   }
 }
      
