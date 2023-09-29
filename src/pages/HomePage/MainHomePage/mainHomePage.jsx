@@ -6,10 +6,10 @@ export default function MainHomePage() {
   return (
     <div className={style.choiceMenu}>
       <Link className={style.choiceLink} to="/profile/12">
-        julien
+        Karl
       </Link>
       <Link className={style.choiceLink} to="/profile/18">
-        romain{" "}
+        Cécilia{" "}
       </Link>
     </div>
   );

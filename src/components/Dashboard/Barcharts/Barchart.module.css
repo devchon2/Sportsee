@@ -1,0 +1,9 @@
+.barchartsContainer{
+  display:flex;
+  height:50%;
+}
+
+.barchart{
+  display:flex;
+  width:50%;
+}

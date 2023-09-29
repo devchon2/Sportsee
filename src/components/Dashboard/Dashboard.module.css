@@ -1,28 +1,42 @@
 .dashboardContainer {
   display: flex;
   flex-direction: column;
+  max-height:100%;
   width: 100%;
   padding: 20px;
 }
 
-.GraphsSection {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+
+
+
+.viewStats{
+  display:flex;
+  height:90%;
+  width:100%;
+  padding:20px 20px 20px 0;
 }
 
-.welcomecontainer {
-  height: 10%;
-  display: flex;
+.graphsSection{
+  display:flex;
+  flex-direction:column;
+  max-height:100%;
+  width:80%;
+  justify-content:center;
+  align-items:center;
 }
 
-.welcomeMsg {
-  display: flex;
-  align-items: center;
-  font-size: 2rem;
+.keyDatasContainer{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:red;
+  max-height:100%;
+  width:20%;
 }
 
-.lastName {
-  color: red;
-  text-transform: capitalize;
+.graphSectionDown{
+  display:flex;
+  height:50%;
+  width:100%
 }
+

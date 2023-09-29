@@ -1,0 +1,28 @@
+.welcomeContainer {
+  height: 10%;
+  display: flex;
+  padding-bottom:10px;
+}
+
+.welcomeMsg {
+  display: flex;
+  flex-direction:column;
+  align-items: flex-start;
+  font-size: 3rem;
+  height:100%;
+  
+}
+
+.welcome{
+  margin-bottom:10px;
+}
+
+.firstName {
+  color: red;
+  text-transform: capitalize;
+}
+
+.congratulations{
+  display:flex;
+  font-size:1rem;
+}

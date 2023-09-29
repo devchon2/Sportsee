@@ -1,0 +1,8 @@
+.radarContainer{
+  display:flex;
+}
+
+.radarChart{
+  display:flex;
+  flex-direction:column;
+}
