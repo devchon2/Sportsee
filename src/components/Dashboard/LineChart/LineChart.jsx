@@ -1,4 +1,4 @@
-import { LineChart, Line, XAxis, YAxis, Legend, Tooltip, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, XAxis, YAxis,  Tooltip, ResponsiveContainer } from 'recharts';
 import style from './LineChart.module.css'
 
 export default function LineChartComponent({ data }){

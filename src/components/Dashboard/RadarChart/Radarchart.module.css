@@ -1,8 +1,19 @@
 .radarContainer{
   display:flex;
+background-color: #000;
+
+width:20vw !important;
+height:20vw !important;
+
 }
 
 .radarChart{
+  width:100%;
+  height:100%;
   display:flex;
   flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding: 20px
+  
 }

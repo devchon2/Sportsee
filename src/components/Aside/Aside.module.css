@@ -1,11 +1,12 @@
 .aside{
    display:flex;
-   position:static;
+   position:relative;
    flex-direction:column;
    justify-content:center;
    align-items:flex-start;
    width:70px;
    height:100%;
+   max-height:100%;
    background:black;
    order:0;
 }

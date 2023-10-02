@@ -5,15 +5,14 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Responsi
 export default function RadarCharts({data}){
 
   
-console.log(data)
 
 return (
-  <ResponsiveContainer className={style.radarContainer} width="30%" height="100%"  >
-    <RadarChart className={style.radarChart} cx="50%" cy="50%" outerRadius="80%" data={data} background='black'>
+  <ResponsiveContainer className={style.radarContainer}    >
+    <RadarChart className={style.radarChart} cx="50%" cy="50%"  data={data}   >
       <PolarGrid gridType="polygon" radialLines={false}/>
-      <PolarAngleAxis dataKey='kind' />
-      <PolarRadiusAxis angle={30} domain={['dataMin', 'dataMax']} tick={false} />
-      <Radar stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
+      <PolarAngleAxis dataKey='kind' domain={['datamin', 'datamax']} />
+      <PolarRadiusAxis angle={30}  tick={false} />
+      <Radar stroke="#8884d8" dataKey='data' fill="red"  fillOpacity={0.6}  />
     </RadarChart>
   </ResponsiveContainer>
 );

@@ -1,9 +1,17 @@
 .radialChartContainer{
   display: flex;
+  width:20vw !important;
+  height:20vw !important;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .radialChart{
-  display:flex;
+  width:20vw !important;
+  height:20vw !important;
+  justify-content: center;
+  align-items: center;
 }
 
 .radialBar{

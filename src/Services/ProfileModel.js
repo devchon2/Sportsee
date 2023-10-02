@@ -1,4 +1,7 @@
-
+import carbsIcon from '../assets/carbs-icon.svg'
+import caloriesIcon from '../assets/calories-icon.svg'
+import proteinsIcon from '../assets/protein-icon.svg'
+import fatIcon from '../assets/fat-icon.svg'
 
 export default class ProfileModel {
   constructor(id, userDatas) {
@@ -15,6 +18,17 @@ export default class ProfileModel {
 
     //récupération des informations de KeyData
     this.keyData = userDatas[0].keyData
+
+    console.log('test keydata constructor', this.keyData)
+
+    this.formatedKeyData = [
+      {type : 'caloriesCount' ,value:  this.keyData.calorieCount, icon : caloriesIcon, unit : 'kCal'},
+      {type : 'proteinCount' ,value:  this.keyData.proteinCount, icon : proteinsIcon, unit : 'g'},
+      {type : 'carbohydrateCount' ,value:  this.keyData.carbohydrateCount, icon : carbsIcon, unit : 'g'},
+      {type : 'lipidCount' ,value:  this.keyData.lipidCount, icon : fatIcon, unit : 'g'},
+    ]      
+
+    console.log('test formatedKeydata', this.formatedKeyData)
 
     //récupération des informations de Moyenne de session 
     this.averageSessions = userDatas[3]
@@ -43,16 +57,17 @@ export default class ProfileModel {
     //récupération des informations de Activity
     this.activities = userDatas[1]
     this.formatedActivities = [
-      {kind: this.activities[1]},
-      {kind: this.activities[2]},
-      {kind: this.activities[3]},
-      {kind: this.activities[4]},
-      {kind: this.activities[5]},
-      {kind: this.activities[6]}
+      {kind: this.activities.kind[1],data: (this.activities.data[0]).value},
+      {kind: this.activities.kind[2],data: (this.activities.data[1]).value},
+      {kind: this.activities.kind[3],data: (this.activities.data[2]).value},
+      {kind: this.activities.kind[4],data: (this.activities.data[3]).value},
+      {kind: this.activities.kind[5],data: (this.activities.data[4]).value},
+      {kind: this.activities.kind[6],data: (this.activities.data[5]).value},
     ]
 
-    console.log('test activity', this.formatedActivities)
 
-  }
+      
+    
+}
 }
      

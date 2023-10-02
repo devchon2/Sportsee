@@ -10,13 +10,13 @@ export default async function getProfile(id, source) {
   if (source === 'mock') {
     Datas = [
       mockDatas.USER_MAIN_DATA.filter((obj) => Number(obj.id) === Number(id))[0],
-      (mockDatas.USER_PERFORMANCE.filter((obj) => Number(obj.userId) === Number(id))[0]).kind,
+      mockDatas.USER_PERFORMANCE.filter((obj) => Number(obj.userId) === Number(id))[0],
       (mockDatas.USER_ACTIVITY.filter((obj) => Number(obj.userId) === Number(id))[0]).sessions,
       (mockDatas.USER_AVERAGE_SESSIONS.filter((obj) => Number(obj.userId) === Number(id))[0]).sessions,
     ];
 
 
-    console.log('test datas.mock', Datas)
+    
   } else {
 
     const infoUrl = `http://localhost:3001/user/${id}`;
@@ -29,8 +29,8 @@ export default async function getProfile(id, source) {
     const activities = await fetch(activitiesUrl).then((response) => response.json());
     const average = await fetch(averageSessionUrl).then((response) => response.json());
 
-    Datas = [ await infos.data, await (perfs.data).kind, await (activities.data).sessions, await (average.data).sessions];
-  }    console.log('test datas.api',Datas)
-
+    Datas = [ await infos.data,  await perfs.data, await (activities.data).sessions, await (average.data).sessions];
+  }
+   
   return new ProfileModel(id, Datas);
 }
