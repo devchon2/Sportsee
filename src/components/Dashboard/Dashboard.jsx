@@ -49,7 +49,7 @@ console.log('formatedKeyData before Dashboard',formatedKeyData)
             <RadialChartComponent data={score} />
           </div>
         </div>
-        <ResponsiveContainer className={style.keyDatasContainer} width="30%" height="100%">
+        <ResponsiveContainer className={style.keyDatasContainer} width="30%" height="100%"  >
         <KeyDatasComponent data={formatedKeyData}/>
         
         </ResponsiveContainer>

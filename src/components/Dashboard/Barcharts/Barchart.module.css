@@ -1,9 +1,32 @@
 .barchartsContainer{
   display:flex;
   height:50%;
+  background-color: #fbfbfb;
+  border-radius: 15px;
 }
 
 .barchart{
   display:flex;
   width:50%;
+  height:80%;
+}
+
+.tooltip{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items:center;
+  background-color: red;
+  color:white;
+}
+
+.label{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:20%;
+  width:100%;
+  padding:15px;
+  font-size: .65em;
+  
 }

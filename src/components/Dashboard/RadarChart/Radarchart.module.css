@@ -1,6 +1,7 @@
 .radarContainer{
   display:flex;
 background-color: #000;
+border-radius:15px;
 
 width:20vw !important;
 height:20vw !important;

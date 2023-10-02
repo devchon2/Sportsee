@@ -1,6 +1,7 @@
 .linechartComponent{
   display:flex;
   background-color:red;
+  border-radius:15px;
 
   width:20vw !important;
   height:20vw !important;

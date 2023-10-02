@@ -14,7 +14,7 @@ export default class ProfileModel {
     this.age = this.personalsInfos.age
     
         //récupération des informations de Score
-    this.score = [{ name : 'score', value: userDatas[0].score ? userDatas[0].score : userDatas[0].todayScore }]
+    this.score = [{ name : 'score', value: userDatas[0].score  ? userDatas[0].score : userDatas[0].todayScore * 100 }]
 
     //récupération des informations de KeyData
     this.keyData = userDatas[0].keyData

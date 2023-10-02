@@ -11,7 +11,7 @@ export default function KeyDatasComponent({ data }) {
           return (
             <article key={Math.random()} className={style.keyData}>
              <img className={style.keyDataIcon} src={keyData.icon} alt={`${keyData.type} icone`} />
-              <div>
+              <div className={style.textContainer}>
                 <p className={style.keyDataName}>
                   {keyData.type === "caloriesCount"
                     ? "Calories"
@@ -21,7 +21,7 @@ export default function KeyDatasComponent({ data }) {
                     ? "Glucides"
                     : "Lipides"}
                 </p>
-                <p className={style.keyDataValue}>{keyData.value}</p>
+                <p className={style.keyDataValue}>{keyData.value+ keyData.unit}</p>
               </div>
             </article>
           );

@@ -2,6 +2,7 @@ import { LineChart, Line, XAxis, YAxis,  Tooltip, ResponsiveContainer } from 're
 import style from './LineChart.module.css'
 
 export default function LineChartComponent({ data }){
+  console.log('data in linechart', data)
   return (
   <ResponsiveContainer className={style.linechartComponent } width='30%' height='100%'>
   <LineChart
@@ -21,20 +22,23 @@ export default function LineChartComponent({ data }){
 
         <YAxis
           type="number"
-          
+          dataKey="sessionLength"
           stroke="white"
-          hide='true'
+          hide={true}
+          tickSize={0}
+          tickMargin={10}
+          domain={[0, 'dataMax + 10']}
           />
         
         <Line
           dataKey="sessionLength"
-          type='monotone'
+          type='basis'
           stroke='white'
-          fill='white'
+          
           dot={false}
           strokeWidth={2}
         />
-        <Tooltip />
+        <Tooltip  />
       </LineChart>
 </ResponsiveContainer>);
 
