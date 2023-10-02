@@ -13,7 +13,8 @@
   display:flex;
   height:90%;
   width:100%;
-  padding:20px 20px 20px 0;  justify-content:space-between;
+  padding:20px 20px 0px 0;  
+  justify-content:space-between;
 
 }
 
@@ -23,6 +24,7 @@
   justify-content:space-between;
   width:70%;
   align-items:center;
+  
 }
 
 
@@ -30,7 +32,11 @@
 .graphSectionDown{
   display:flex;
   justify-content:space-between;
-  width:100%
+  width:100%;
+  height:-webkit-fit-content;
+  height:-moz-fit-content;
+  height:fit-content;
+  padding:0px 0px 20px 0px;
 }
 
 .keyDatasContainer{

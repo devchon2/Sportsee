@@ -1,6 +1,30 @@
 import { LineChart, Line, XAxis, YAxis,  Tooltip, ResponsiveContainer } from 'recharts';
 import style from './LineChart.module.css'
 
+
+
+  const CustomTooltip = ({ active, payload, }) => {
+    if (active && payload && payload.length) {
+      console.log('payload', payload)
+   return (
+      <div className={style.tooltip}>
+   {payload.map((payl) => {
+    console.log('payl', payl)
+      const { unit,value } = payl
+      console.log('unit', unit)
+      return (
+        <div className={style.tooltip}>
+          <p className={style.label}>{`${value}min`}</p>
+        </div>
+      );
+    })}
+    </div>
+  );
+}
+return null;
+};
+
+
 export default function LineChartComponent({ data }){
   console.log('data in linechart', data)
   return (
@@ -26,19 +50,18 @@ export default function LineChartComponent({ data }){
           stroke="white"
           hide={true}
           tickSize={0}
-          tickMargin={10}
-          domain={[0, 'dataMax + 10']}
+          domain={['dataMin-5', 'dataMax + 5']}
           />
         
-        <Line
+        <Line className={style.line}
           dataKey="sessionLength"
           type='basis'
           stroke='white'
-          
+          fill='linear-gradient(90deg, rgba(255,0,0,0.5830707282913166) 0%, rgba(255,255,255,1) 100%, rgba(255,0,0,1) 100%, rgba(255,0,0,1) 100%)'  
           dot={false}
           strokeWidth={2}
         />
-        <Tooltip  />
+        <Tooltip content={<CustomTooltip />} />
       </LineChart>
 </ResponsiveContainer>);
 

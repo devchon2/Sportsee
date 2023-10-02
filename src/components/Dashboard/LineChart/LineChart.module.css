@@ -5,4 +5,19 @@
 
   width:20vw !important;
   height:20vw !important;
+  max-width:300px;
+max-height:300px;
+}
+
+.tooltip{
+  display:flex;
+  background-color:#FFFFFF;
+}
+
+.label{
+  display:flex;
+  background-color:#FFFFFF;
+  color:black;
+  font-size:80%;
+  padding:0.75rem 1rem;
 }

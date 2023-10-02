@@ -5,6 +5,8 @@ border-radius:15px;
 
 width:20vw !important;
 height:20vw !important;
+max-width:300px;
+max-height:300px;
 
 }
 
