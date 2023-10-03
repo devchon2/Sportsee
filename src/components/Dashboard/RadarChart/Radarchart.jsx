@@ -1,5 +1,5 @@
 import style from './Radarchart.module.css';
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis,  ResponsiveContainer } from 'recharts';
 
 
 export default function RadarCharts({data}){
