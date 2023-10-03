@@ -39,7 +39,8 @@ export default function LineChartComponent({ data }){
           type="category"
           dataKey="day"
           stroke="white"
-          tickSize={0}
+          xAxisId='day'
+          tickSize={7}
           tickMargin={10}
           tickLine={false}
         />
@@ -49,17 +50,21 @@ export default function LineChartComponent({ data }){
           dataKey="sessionLength"
           stroke="white"
           hide={true}
+          yAxisId='sessionLength'
           tickSize={0}
-          domain={['dataMin-5', 'dataMax + 5']}
+          domain={['dataMin-15', 'dataMax + 5']}
           />
         
         <Line className={style.line}
           dataKey="sessionLength"
-          type='basis'
+          type="natural"
           stroke='white'
           fill='linear-gradient(90deg, rgba(255,0,0,0.5830707282913166) 0%, rgba(255,255,255,1) 100%, rgba(255,0,0,1) 100%, rgba(255,0,0,1) 100%)'  
           dot={false}
+          yAxisId='sessionLength'
+          xAxisId='day'
           strokeWidth={2}
+          domain={['dataMin - 5 ', 'dataMax + 5']}
         />
         <Tooltip content={<CustomTooltip />} />
       </LineChart>

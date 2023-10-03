@@ -15,12 +15,10 @@ const CustomTooltip = ({ active, payload }) => {
     return (
       <div className={style.tooltip}>
         {payload.map((payl) => {
-          console.log("payl", payl);
           const { unit, value } = payl;
-          console.log("unit", unit);
           const FormatedUnit = unit === "Kcal" ? "Kcal" : "Kg";
           return (
-            <div className={style.tooltip}>
+            <div className={style.tooltip} key={Math.random()}>
               <p className={style.label}>{`${value}${FormatedUnit}`}</p>
               <p className={style.intro}></p>
             </div>
@@ -33,18 +31,17 @@ const CustomTooltip = ({ active, payload }) => {
 };
 
 const CustomLegend = ({ payload }) => {
-  console.log("payload in customlegend", payload);
   return (
     <div className={style.legend}>
-      {payload.map((entry) => {
+      {payload.map((item) => {
         return (
           <div key={Math.random()} className={style.legendItem}>
             <div className={style.legendIcon}>
               <svg width="10" height="10">
-                <circle cx="5" cy="5" r="5" fill={entry.color} />
+                <circle cx="5" cy="5" r="5" fill={item.color} />
               </svg>
             </div>
-            <p className={style.legendText}>{entry.value}</p>
+            <p className={style.legendText}>{item.value}</p>
           </div>
         );
       })}
@@ -85,8 +82,7 @@ export default function BarchartContainer({ activities }) {
         <Tooltip content={<CustomTooltip />} />
         <Legend
           content={<CustomLegend />}
-          iconSize={8}
-          iconType="circle"
+          
           verticalAlign="top"
           align="right"
           margin={{ top: 10, right: 20, bottom: 50, left: 50 }}
