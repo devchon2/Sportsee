@@ -2,7 +2,7 @@
   display:flex;
   background-color:red;
   border-radius:15px;
-
+overflow:hidden;
   width:20vw !important;
   height:20vw !important;
   max-width:300px;
@@ -20,4 +20,20 @@ max-height:300px;
   color:black;
   font-size:80%;
   padding:0.75rem 1rem;
+}
+
+.rectangle{
+  display:flex;
+  background-color:#FFFFFF;
+  color:black;
+  font-size:80%;
+  padding:0.75rem 1rem;
+  border:none;
+  border-radius:15px;
+  
+}
+
+.line{
+  
+  
 }

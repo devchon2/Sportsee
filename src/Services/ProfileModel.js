@@ -18,7 +18,6 @@ export default class ProfileModel {
     //récupération des informations de KeyData
     this.keyData = userDatas[0].keyData
 
-    console.log('test keydata constructor', this.keyData)
 
     this.formatedKeyData = [
       { type: 'caloriesCount', value: this.keyData.calorieCount, icon: caloriesIcon, unit: 'kCal' },
@@ -27,11 +26,12 @@ export default class ProfileModel {
       { type: 'lipidCount', value: this.keyData.lipidCount, icon: fatIcon, unit: 'g' },
     ]
 
-    console.log('test formatedKeydata', this.formatedKeyData)
 
     //récupération des informations de Moyenne de session 
     this.averageSessions = userDatas[3]
     this.formatedAverage = [
+
+      { day: '', sessionLength: this.averageSessions[0].sessionLength },
       { day: 'L', sessionLength: this.averageSessions[0].sessionLength },
       { day: 'M', sessionLength: this.averageSessions[1].sessionLength },
       { day: 'M', sessionLength: this.averageSessions[2].sessionLength },
@@ -39,6 +39,7 @@ export default class ProfileModel {
       { day: 'V', sessionLength: this.averageSessions[4].sessionLength },
       { day: 'S', sessionLength: this.averageSessions[5].sessionLength },
       { day: 'D', sessionLength: this.averageSessions[6].sessionLength },
+      { day: '', sessionLength: this.averageSessions[6].sessionLength },
     ]
 
     //récupération des informations de 
@@ -64,7 +65,6 @@ export default class ProfileModel {
       { kind: this.activities.kind[1] === 'cardio' ? 'Cardio' : null, data: (this.activities.data[0]).value },
     ]
 
-    console.log('test activities', this.formatedActivities)
 
 
 

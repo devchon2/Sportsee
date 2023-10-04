@@ -1,73 +1,86 @@
-import { LineChart, Line, XAxis, YAxis,  Tooltip, ResponsiveContainer } from 'recharts';
-import style from './LineChart.module.css'
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+  Rectangle,
+} from "recharts";
+import style from "./LineChart.module.css";
 
-
-
-  const CustomTooltip = ({ active, payload, }) => {
-    if (active && payload && payload.length) {
-      console.log('payload', payload)
-   return (
+const CustomTooltip = ({ active, payload }) => {
+  if (active && payload && payload.length) {
+    
+    return (
       <div className={style.tooltip}>
-   {payload.map((payl) => {
-    console.log('payl', payl)
-      const { unit,value } = payl
-      console.log('unit', unit)
-      return (
-        <div className={style.tooltip}>
-          <p className={style.label}>{`${value}min`}</p>
-        </div>
-      );
-    })}
-    </div>
-  );
-}
-return null;
+        {payload.map((payl, index) => {
+          const { value } = payl;
+          
+          return (
+            <div key={index}>
+              <p className={style.label}>{`${value}min`}</p>
+              
+            </div>
+          );
+        })}
+      </div>
+    );
+  }
+  return null;
 };
 
+function CustomCursor(payload,active) {
+console.log("payload",payload)
 
-export default function LineChartComponent({ data }){
-  console.log('data in linechart', data)
+  const { points } = payload;
+  const { x } = points[0];
+    return (
+       <Rectangle className={style.rectangle}  x={x} y={0} width={500} height={500} fill="rgba(0, 0, 0, 0.2)"  />
+    );
+  }
+
+
+
+
+export default function LineChartComponent({  data }) {
   return (
-  <ResponsiveContainer className={style.linechartComponent } width='30%' height='100%'>
-  <LineChart
+    <ResponsiveContainer className={style.linechartComponent} width="30%" height="100%">
+      <LineChart
         data={data}
-        width='100%'
-        height='100%'
-        margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
-      >
-        <XAxis
-          type="category"
+        margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
+
+        >
+        
+        <XAxis type="category"
           dataKey="day"
           stroke="white"
-          xAxisId='day'
-          tickSize={7}
-          tickMargin={10}
+          tickSize={0}
+          
+          tickMargin= {10}
           tickLine={false}
+          axisLine={false}
         />
-
         <YAxis
           type="number"
           dataKey="sessionLength"
           stroke="white"
           hide={true}
-          yAxisId='sessionLength'
-          tickSize={0}
-          domain={['dataMin-15', 'dataMax + 5']}
-          />
-        
-        <Line className={style.line}
+          domain={["dataMin-15", "dataMax + 25"]}
+        />
+        <Line
+        className={style.line}
           dataKey="sessionLength"
           type="natural"
-          stroke='white'
-          fill='linear-gradient(90deg, rgba(255,0,0,0.5830707282913166) 0%, rgba(255,255,255,1) 100%, rgba(255,0,0,1) 100%, rgba(255,0,0,1) 100%)'  
+          stroke="white"   
           dot={false}
-          yAxisId='sessionLength'
-          xAxisId='day'
           strokeWidth={2}
-          domain={['dataMin - 5 ', 'dataMax + 5']}
-        />
-        <Tooltip content={<CustomTooltip />} />
-      </LineChart>
-</ResponsiveContainer>);
+          domain={["dataMin - 5 ", "dataMax + 5"]}
+          cursor={<CustomCursor/>}      
 
+        />
+        <Tooltip content={<CustomTooltip />} cursor={<CustomCursor/>} />
+      </LineChart>
+    </ResponsiveContainer>
+  );
 }

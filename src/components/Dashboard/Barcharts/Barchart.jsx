@@ -73,12 +73,13 @@ export default function BarchartContainer({ activities }) {
           hide={false}
           yAxisId="kg"
           orientation="right"
-          domain={['dataMin - 1','dataMax +1']}
+          domain={['dataMin - 1','dataMax + 1']}
           tickLine={false}
-          tickCount={4}
+          tickCount={5}
+          includeHidden={true}
           
         />
-        <YAxis dataKey="calories" hide={true} id="cal"  yAxisId='cal' />
+        <YAxis dataKey="calories" hide={true} id="cal" tickCount={5} yAxisId='cal' domain={[0,'dataMax +10']} />
         <Tooltip content={<CustomTooltip />} />
         <Legend
           content={<CustomLegend />}
