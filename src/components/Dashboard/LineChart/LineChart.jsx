@@ -6,8 +6,10 @@ import {
   Tooltip,
   ResponsiveContainer,
   Rectangle,
+  Legend,
 } from "recharts";
 import style from "./LineChart.module.css";
+import { func } from "prop-types";
 
 const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
@@ -30,8 +32,7 @@ const CustomTooltip = ({ active, payload }) => {
   return null;
 };
 
-function CustomCursor(payload,active) {
-console.log("payload",payload)
+function CustomCursor(payload,) {
 
   const { points } = payload;
   const { x } = points[0];
@@ -39,6 +40,22 @@ console.log("payload",payload)
        <Rectangle className={style.rectangle}  x={x} y={0} width={500} height={500} fill="rgba(0, 0, 0, 0.2)"  />
     );
   }
+
+function CustomLegend({ payload }) {
+  return (
+    <div className={style.legend}>
+      {payload.map(() => {
+        return (
+          <div  className={style.legendItem}>
+            
+            <p className={style.legendText}>{`Durée moyenne 
+                                                des sessions` }</p>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
 
 
 
@@ -79,6 +96,7 @@ export default function LineChartComponent({  data }) {
           cursor={<CustomCursor/>}      
 
         />
+        <Legend align='left' verticalAlign="top" content={<CustomLegend />} />
         <Tooltip content={<CustomTooltip />} cursor={<CustomCursor/>} />
       </LineChart>
     </ResponsiveContainer>
