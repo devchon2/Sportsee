@@ -10,7 +10,7 @@ import {
 } from "recharts";
 import style from "./LineChart.module.css";
 
-const CustomTooltip = ({ active, payload }) => {
+function CustomTooltip({active, payload }){
   if (active && payload && payload.length) {
     
     return (
@@ -31,7 +31,7 @@ const CustomTooltip = ({ active, payload }) => {
   return null;
 };
 
-function CustomCursor(payload,) {
+function CustomCursor(payload) {
 
   const { points } = payload;
   const { x } = points[0];
@@ -61,7 +61,7 @@ function CustomLegend({ payload }) {
 
 export default function LineChartComponent({  data }) {
   return (
-    <ResponsiveContainer className={style.linechartComponent} width="30%" height="100%">
+    <ResponsiveContainer className={style.linechartComponent} width="30%" height="100%" aspect={1}>
       <LineChart
         data={data}
         margin={{ top: 0, right: 0, bottom: 0, left: 0 }}

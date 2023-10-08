@@ -1,9 +1,38 @@
-.pieChart{
+.pieChartComponent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #FBFBFB;
   border-radius: 15px;
+  overflow: hidden;
+  width: 20vw !important;
+  height: 20vw !important;
+  max-width: 350px;
+  max-height: 350px;
 }
 
-.legend{
-  color:black; 
-
+.legend {
+  position:absolute;
+  font-weight: bold;
+  font-size:1.2vh;
+  margin-top:5%;
+  margin-left:5%
 }
+
+.labelScore{
+  font-size: 3.5vh;
+  font-weight: bold;
+  
+}
+
+.labelText{
+  font-size: 1.5vh;
+  font-weight: 500;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  text-align: center;
+  fill: darkgrey;
+}
+

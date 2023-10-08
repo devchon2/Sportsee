@@ -2,13 +2,13 @@
   display:flex;
   justify-content:flex-start;
   align-items:center;
-  width:80%;
+  width:70%;
   height:20%;
   padding:10px;
   border:none;;
   border-radius:15px;
   background-color:#FBFBFB;
-  font-size:14px;
+  font-size:1.4vh;
   color:grey;
 }
 .keyDataName{
@@ -18,7 +18,7 @@
 }
 .keyDataValue{
   display:flex;
-  font-size:75%;
+  font-size:1.2vh;
   font-weight:500;
 }
 

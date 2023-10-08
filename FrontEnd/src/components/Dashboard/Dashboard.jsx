@@ -11,7 +11,7 @@ import { ResponsiveContainer } from "recharts";
 
 
 export default function Dashboard({ id }) {
-  const type = "api";
+  const type = "mock";
   const [profil, setProfil] = useState("");
 
   useEffect(() => {
@@ -31,7 +31,9 @@ export default function Dashboard({ id }) {
     formatedActivities,
   } = profil;
 
-
+if (profil) {
+  
+  console.log('score in dashboard', score);
 
   return (
     <div className={style.dashboardContainer}>
@@ -53,4 +55,5 @@ export default function Dashboard({ id }) {
       </section>
     </div>
   );
+}
 }

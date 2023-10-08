@@ -5,8 +5,8 @@
   overflow: hidden;
   width: 20vw !important;
   height: 20vw !important;
-  max-width: 300px;
-  max-height: 300px;
+  max-width: 350px;
+  max-height: 350px;
 }
 
 .tooltip {
@@ -18,7 +18,7 @@
   display: flex;
   background-color: #ffffff;
   color: black;
-  font-size: 80%;
+  font-size: 1.2vh;
   padding: 0.75rem 1rem;
 }
 
@@ -26,7 +26,7 @@
   display: flex;
   color: white;
   opacity: 0.3;
-  font-size: 1.2=4vh;
+  font-size: 1.2vh;
   font-weight: 550;
   position: relative;
   top: 30px;

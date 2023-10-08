@@ -7,11 +7,11 @@ export default function RadarCharts({data}){
   
 
 return (
-  <ResponsiveContainer className={style.radarContainer}    >
+  <ResponsiveContainer className={style.radarContainer} width='30%' aspect={1}   >
     <RadarChart className={style.radarChart} cx="50%" cy="50%"  data={data}    >
       <PolarGrid className={style.axis} gridType="polygon" radialLines={false} />
       <PolarAngleAxis  dataKey='kind' domain={['datamin', 'datamax']} tickLine={false}   tickSize={6}  />
-      <Radar stroke="#8884d8" strokeWidth={0} dataKey='data' fill="red" dot={false} fillOpacity={0.6}  />
+      <Radar  dataKey='data' fill="red" dot={false} fillOpacity={0.7}  />
     </RadarChart>
   </ResponsiveContainer>
 );
