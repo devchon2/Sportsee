@@ -9,7 +9,6 @@ import {
   Legend,
 } from "recharts";
 import style from "./LineChart.module.css";
-import { func } from "prop-types";
 
 const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
@@ -46,7 +45,7 @@ function CustomLegend({ payload }) {
     <div className={style.legend}>
       {payload.map(() => {
         return (
-          <div  className={style.legendItem}>
+          <div key={Math.random()} className={style.legendItem}>
             
             <p className={style.legendText}>{`Durée moyenne 
                                                 des sessions` }</p>

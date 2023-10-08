@@ -5,7 +5,7 @@ import getProfile from "../../Services/ProfileRequest.js";
 import { useState, useEffect,  } from "react";
 import RadarCharts from "./RadarChart/Radarchart.jsx";
 import LineChartComponent from "./LineChart/LineChart.jsx";
-import RadialChartComponent from "./RadialChart/Radialchart.jsx";
+import PieChartComponent from "./PieChart/PieChart.jsx";
 import KeyDatasComponent from "./KeyDatasContainer/KeyDatasComponent.jsx";
 import { ResponsiveContainer } from "recharts";
 
@@ -31,9 +31,6 @@ export default function Dashboard({ id }) {
     formatedActivities,
   } = profil;
 
-console.log('formatedKeyData before Dashboard',formatedKeyData)
-
-
 
 
   return (
@@ -46,7 +43,7 @@ console.log('formatedKeyData before Dashboard',formatedKeyData)
           <div className={style.graphSectionDown}>
             <LineChartComponent data={formatedAverage} />
             <RadarCharts data={formatedActivities} />
-            <RadialChartComponent data={score} />
+            <PieChartComponent data={score} />
           </div>
         </div>
         <ResponsiveContainer className={style.keyDatasContainer} width="30%" height="100%"  >

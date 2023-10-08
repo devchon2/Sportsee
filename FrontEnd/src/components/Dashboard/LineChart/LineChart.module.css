@@ -24,10 +24,10 @@
 
 .legendItem {
   display: flex;
-  color: black;
+  color: white;
   opacity: 0.3;
-  font-size: 1.6vh;
-  font-weight: 600;
+  font-size: 1.2=4vh;
+  font-weight: 550;
   position: relative;
   top: 30px;
   left: 20px;
