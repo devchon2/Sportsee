@@ -9,7 +9,7 @@ export default function KeyDatasComponent({ data }) {
           return (
             <article key={Math.random()} className={style.keyData}>
              <img className={style.keyDataIcon} src={keyData.icon} alt={`${keyData.type} icone`} />
-              <div className={style.textContainer}>
+              <div className={style.keyDataTextContainer}>
                 <p className={style.keyDataName}>
                   {keyData.type === "caloriesCount"
                     ? "Calories"

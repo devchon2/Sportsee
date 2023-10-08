@@ -1,12 +1,10 @@
 .pieChartComponent {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  
   background-color: #FBFBFB;
   border-radius: 15px;
   overflow: hidden;
-  width: 20vw !important;
-  height: 20vw !important;
+  width: 25vh !important;
+  height: 25vh !important;
   max-width: 350px;
   max-height: 350px;
 }
@@ -15,8 +13,8 @@
   position:absolute;
   font-weight: bold;
   font-size:1.2vh;
-  margin-top:5%;
-  margin-left:5%
+  margin-top:10%;
+  margin-left:10%
 }
 
 .labelScore{
@@ -27,12 +25,8 @@
 
 .labelText{
   font-size: 1.5vh;
-  font-weight: 500;
-  margin-top: 5%;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-bottom: 5%;
-  text-align: center;
+  font-weight: 600;
   fill: darkgrey;
+  
 }
 

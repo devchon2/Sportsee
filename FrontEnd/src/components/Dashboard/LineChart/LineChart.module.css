@@ -3,8 +3,8 @@
   background-color: red;
   border-radius: 15px;
   overflow: hidden;
-  width: 20vw !important;
-  height: 20vw !important;
+  width: 25vh !important;
+  height: 25vh !important;
   max-width: 350px;
   max-height: 350px;
 }

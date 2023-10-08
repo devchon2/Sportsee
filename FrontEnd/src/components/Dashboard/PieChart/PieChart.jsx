@@ -14,17 +14,17 @@ export default function PieChartComponent({ data }) {
         <text
           className={style.labelScore}
           x="50%"
-          y="45%"
+          y="50%"
           textAnchor="middle"
-          dominantBaseline="middle"
+          dominantBaseline="top"
         >
           {data[0].value}%
         </text>
         <text
           x="50%"
-          y="55%"
+          y="60%"
           textAnchor="middle"
-          dominantBaseline="middle"
+          dominantBaseline="bottom"
           className={style.labelText}
         >
           de votre objectif
@@ -34,7 +34,7 @@ export default function PieChartComponent({ data }) {
   }
 
   return (
-    <ResponsiveContainer className={style.pieChartComponent} aspect={1}>
+    <ResponsiveContainer className={style.pieChartComponent} >
       <PieChart className={style.pieChart} >
         <Pie
           className={style.bar}
@@ -43,8 +43,8 @@ export default function PieChartComponent({ data }) {
           nameKey="name"
           cx="50%"
           cy="50%"
-          outerRadius="100"
-          innerRadius="90"
+          outerRadius="80%"
+          innerRadius="70%"
           cornerRadius={10}
           startAngle={-180}
           endAngle={angle}
@@ -59,8 +59,8 @@ export default function PieChartComponent({ data }) {
           dataKey="value"
           isAnimationActive={false}
           fill="white"
-          outerRadius="89"
-          innerRadius="0"
+          outerRadius="69%"
+          innerRadius="0%"
         >
           <Label
             content={<CustomisedLabel />}

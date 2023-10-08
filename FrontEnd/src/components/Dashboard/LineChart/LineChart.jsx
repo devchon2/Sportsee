@@ -72,7 +72,7 @@ export default function LineChartComponent({  data }) {
           dataKey="day"
           stroke="white"
           tickSize={0}
-          
+          tick={{ fontSize: "1.2vh", opacity: 0.5 }}
           tickMargin= {10}
           tickLine={false}
           axisLine={false}

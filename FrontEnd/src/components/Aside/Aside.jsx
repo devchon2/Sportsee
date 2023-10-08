@@ -33,6 +33,8 @@ export default function Aside(){
         )
       })
     }
+    <p className={style.copyRights}>Copiryght, SportSee 2020
+</p>
     </aside>
   )
 }
