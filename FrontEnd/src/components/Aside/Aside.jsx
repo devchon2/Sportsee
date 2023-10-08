@@ -33,7 +33,7 @@ export default function Aside(){
         )
       })
     }
-    <p className={style.copyRights}>Copiryght, SportSee 2020
+    <p className={style.copyRights}>Copyright, SportSee 2020
 </p>
     </aside>
   )

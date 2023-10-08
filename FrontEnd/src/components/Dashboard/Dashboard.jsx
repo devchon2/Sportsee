@@ -33,8 +33,6 @@ export default function Dashboard({ id }) {
 
 if (profil) {
   
-  console.log('score in dashboard', score);
-
   return (
     <div className={style.dashboardContainer}>
       <WelcomeContainer firstName={firstName} />

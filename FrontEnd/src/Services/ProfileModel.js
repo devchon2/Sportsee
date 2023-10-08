@@ -16,7 +16,6 @@ export default class ProfileModel {
     //récupération des informations de Score
     this.score = [{ name: 'score', value: userDatas[0].score ? userDatas[0].score * 100 : userDatas[0].todayScore * 100 }]
     this.score.push({ name: 'score', value: 0 })
-        console.log(this.score)
 
 
     //récupération des informations de KeyData
