@@ -5,7 +5,7 @@ import bicycle from '../../assets/bicycle.svg'
 import swimming from '../../assets/swimming.svg'
 import ActivityButton from './ActivityButton/ActivityButton.jsx'
 
-export default function Aside(){
+export default function Aside() {
   const activities = [
     {
       'name': 'yoga',
@@ -22,19 +22,19 @@ export default function Aside(){
     {
       'name': 'bicycle',
       'image': bicycle
-    }]; 
+    }];
 
   return (
     <aside className={style.aside} >
       {activities.map((activity) => {
-        const { name,image} = activity;
+        const { name, image } = activity;
         return (
-        <ActivityButton key={Math.random()} activity={name} icon={image} />
+          <ActivityButton key={Math.random()} activity={name} icon={image} />
         )
       })
-    }
-    <p className={style.copyRights}>Copyright, SportSee 2020
-</p>
+      }
+      <p className={style.copyRights}>Copyright, SportSee 2020
+      </p>
     </aside>
   )
 }

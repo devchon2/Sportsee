@@ -16,7 +16,7 @@ export default async function getProfile(id, source) {
     ];
 
 
-    
+
   } else {
 
     const infoUrl = `http://localhost:3001/user/${id}`;
@@ -29,8 +29,8 @@ export default async function getProfile(id, source) {
     const activities = await fetch(activitiesUrl).then((response) => response.json());
     const average = await fetch(averageSessionUrl).then((response) => response.json());
 
-    Datas = [ await infos.data,  await perfs.data, await (activities.data).sessions, await (average.data).sessions];
+    Datas = [await infos.data, await perfs.data, await (activities.data).sessions, await (average.data).sessions];
   }
-   
+
   return new ProfileModel(id, Datas);
 }

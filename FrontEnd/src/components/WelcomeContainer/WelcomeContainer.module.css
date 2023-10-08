@@ -1,19 +1,18 @@
 .welcomeContainer {
   display: flex;
-  padding-bottom:10px;
+  padding-bottom: 10px;
 }
 
 .welcomeMsg {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   align-items: flex-start;
   font-size: 3rem;
-  height:100%;
-  
+  height: 100%;
 }
 
-.welcome{
-  margin-bottom:10px;
+.welcome {
+  margin-bottom: 10px;
 }
 
 .firstName {
@@ -21,7 +20,7 @@
   text-transform: capitalize;
 }
 
-.congratulations{
-  display:flex;
-  font-size:1rem;
+.congratulations {
+  display: flex;
+  font-size: 1rem;
 }

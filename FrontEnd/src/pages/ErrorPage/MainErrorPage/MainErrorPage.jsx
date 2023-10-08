@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import style from "./MainErrorPage.module.css";
 
-export default function MainErrorPage() {
+export default function MainErrorPage(){
   return (
     <div className={style.mainErrorPage}>
       <h1 className={style.errorTitle}>Erreur <span className={style.errorType}> 404</span></h1>

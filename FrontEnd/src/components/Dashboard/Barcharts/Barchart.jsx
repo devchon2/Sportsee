@@ -64,26 +64,26 @@ export default function BarchartContainer({ activities }) {
         barGap={2}
         barSize={10}
         margin={{ top: 20, bottom: 20, left: 20, right: 20 }}
-        
+
       >
         <CartesianGrid horizontal={true} vertical={false} strokeDasharray={3} />
-        <XAxis dataKey="day" tickSize={0} tickMargin={10}  />
+        <XAxis dataKey="day" tickSize={0} tickMargin={10} />
         <YAxis
           dataKey="kilogram"
           hide={false}
           yAxisId="kg"
           orientation="right"
-          domain={['dataMin - 1','dataMax + 1']}
+          domain={['dataMin - 1', 'dataMax + 1']}
           tickLine={false}
           tickCount={5}
           includeHidden={true}
-          
+
         />
-        <YAxis dataKey="calories" hide={true} id="cal" tickCount={5} yAxisId='cal' domain={[0,'dataMax +10']} />
+        <YAxis dataKey="calories" hide={true} id="cal" tickCount={5} yAxisId='cal' domain={[0, 'dataMax +10']} />
         <Tooltip content={<CustomTooltip />} />
         <Legend
           content={<CustomLegend />}
-          
+
           verticalAlign="top"
           align="right"
           margin={{ top: 10, right: 20, bottom: 50, left: 50 }}

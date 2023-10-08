@@ -21,9 +21,8 @@
   max-height: 95%;
 }
 
-.axis{
+.axis {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-

@@ -1,17 +1,15 @@
-.navMenu{
-  display:flex;
-  flex:1;
-  justify-content:space-around;
-
+.navMenu {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
 }
 
-
-.navLink{
-  display:flex;
-  width:100px;
-  color:white;
-  font-size:18px;
-  text-decoration:none;
-  margin:20px 10px;
-  text-align:center;
+.navLink {
+  display: flex;
+  width: 100px;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  margin: 20px 10px;
+  text-align: center;
 }

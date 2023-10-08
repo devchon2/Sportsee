@@ -1,56 +1,54 @@
-.mainHomePage{
-  display:flex;
-  height:100%;
-  width:100%;
-  background:black;
-  
+.mainHomePage {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background: black;
 }
 
-.choiceMenu{
-  order:2;
-  height:100%;
-  width:100%;
-  background:black;
-  display:flex;
-  justify-content:center;
+.choiceMenu {
+  order: 2;
+  height: 100%;
+  width: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  padding:100px;
+  padding: 100px;
 }
 
-.choiceLink{
-  display:flex;
-  justify-content:center;
-  align-content:center;
-  text-align:center;
-  text-decoration:none;
-  font-weight:bold;
-  width:200px;
-  height:50px;
-  line-height:30px;
-  background:lightgrey;
-  border-radius:6px;
-  padding:10px 20px;
-  margin:20px;
-  color:rgb(255, 1, 1);
-  text-transform:capitalize;
+.choiceLink {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  width: 200px;
+  height: 50px;
+  line-height: 30px;
+  background: lightgrey;
+  border-radius: 6px;
+  padding: 10px 20px;
+  margin: 20px;
+  color: rgb(255, 1, 1);
+  text-transform: capitalize;
   box-shadow: 10px 10px 10px rgba(255, 1, 1, 0.3);
 }
 
-.choiceLink:hover{
-  margin-top:30px;
+.choiceLink:hover {
+  margin-top: 30px;
   box-shadow: 5px 5px 5px rgba(255, 1, 1, 0.6);
 }
 
-.choiceLink:active{
-  margin-top:40px;
+.choiceLink:active {
+  margin-top: 40px;
   box-shadow: 1px 1px 1px rgba(255, 1, 1, 0.9);
 }
 
-
-.choiceLink:visited{
-  color:rgb(255, 1, 1);
+.choiceLink:visited {
+  color: rgb(255, 1, 1);
 }
 
-h1{
-    color:black;
+h1 {
+  color: black;
 }

@@ -9,7 +9,7 @@ export default function ProfilePage() {
   const AvailableIds = [12, 18];
 
   const isExist = AvailableIds.includes(Number(id));
-  
+
   if (!isExist) {
     return <Navigate to="/404" />;
   }
@@ -17,7 +17,7 @@ export default function ProfilePage() {
   return (
     <div className={style.profilePage}>
       <Header />
-      <MainProfile id={id}  />
+      <MainProfile id={id} />
     </div>
   );
 }
