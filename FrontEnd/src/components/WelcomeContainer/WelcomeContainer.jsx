@@ -12,8 +12,5 @@ export default function WelcomeContainer({ firstName }) {
         </p>
       </div>
     </div>
-
   )
-
-
 }

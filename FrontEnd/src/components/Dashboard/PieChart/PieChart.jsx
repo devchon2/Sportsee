@@ -33,6 +33,8 @@ export default function PieChartComponent({ data }) {
     );
   }
 
+  
+
   return (
     <ResponsiveContainer className={style.pieChartComponent} >
       <PieChart className={style.pieChart} >

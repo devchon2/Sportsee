@@ -30,6 +30,8 @@ const CustomTooltip = ({ active, payload }) => {
   return null;
 };
 
+
+
 const CustomLegend = ({ payload }) => {
   return (
     <div className={style.legend}>
@@ -77,6 +79,7 @@ export default function BarchartContainer({ activities }) {
           tickLine={false}
           tickCount={5}
           includeHidden={true}
+          allowDecimals={false}
 
         />
         <YAxis dataKey="calories" hide={true} id="cal" tickCount={5} yAxisId='cal' domain={[0, 'dataMax +10']} />

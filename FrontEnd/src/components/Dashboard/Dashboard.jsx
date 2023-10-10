@@ -35,7 +35,7 @@ export default function Dashboard({ id }) {
 
     return (
       <div className={style.dashboardContainer}>
-        <WelcomeContainer firstName={firstName} />
+        <WelcomeContainer firstName={firstName} dataType={type}/>
         <section className={style.viewStats}>
           <div className={style.graphsSection}>
             <BarChartContainer activities={formatedSessions} />
