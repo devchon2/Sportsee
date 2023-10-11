@@ -45,7 +45,7 @@ export default class ProfileModel {
       { day: '', sessionLength: this.averageSessions[6].sessionLength },
     ]
 
-    //récupération des informations de 
+    //récupération des informations de kilo et calorie par session
     this.sessions = userDatas[2]
     this.formatedSessions = [
       { day: '1', kilogram: this.sessions[0].kilogram, calories: this.sessions[0].calories },
@@ -67,9 +67,5 @@ export default class ProfileModel {
       { kind: this.activities.kind[2] === 'energy' ? 'Énergie' : null, data: (this.activities.data[1]).value },
       { kind: this.activities.kind[1] === 'cardio' ? 'Cardio' : null, data: (this.activities.data[0]).value },
     ]
-
-
-
-
   }
 }
