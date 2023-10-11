@@ -38,3 +38,15 @@
   max-height: 100%;
   justify-content: space-between;
 }
+
+
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  color : red;
+  font-size: 30px;
+  font-weight: bold;
+}

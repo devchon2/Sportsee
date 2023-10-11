@@ -10,7 +10,7 @@ import KeyDatasComponent from "./KeyDatasContainer/KeyDatasComponent.jsx";
 import { ResponsiveContainer } from "recharts";
 
 export default function Dashboard({ id }) {
-  const type = "mock";
+  const type = "api";
   const [profil, setProfil] = useState("");
 
   useEffect(() => {
@@ -20,11 +20,10 @@ export default function Dashboard({ id }) {
         setProfil(reponse);
       } catch (error) {
         console.error("Une erreur s'est produite lors de la récupération du profil :", error);
-        // Vous pouvez gérer l'erreur ici, par exemple, afficher un message d'erreur à l'utilisateur.
       }
     }
     fetchData();
-  }, [id]);
+  }, [id, type]);
 
   const {
     formatedAverage,
@@ -56,6 +55,6 @@ export default function Dashboard({ id }) {
       </div>
     );
   } else {
-    return <div>Chargement en cours...</div>;
+    return <p className={style.loading}>Une erreur est survenue, les données d'utilisation sont inacessibles</p>;
   }
 }
