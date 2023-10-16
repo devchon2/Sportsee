@@ -8,7 +8,7 @@ export default function PieChartComponent({ data }) {
     return <p className={style.legend}>Score</p>;
   }
 
-  function CustomisedLabel(props) {
+  function CustomisedLabel() {
     return (
       <>
         <text

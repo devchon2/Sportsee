@@ -10,7 +10,7 @@ import KeyDatasComponent from "./KeyDatasContainer/KeyDatasComponent.jsx";
 import { ResponsiveContainer } from "recharts";
 
 export default function Dashboard({ id }) {
-  const type = "api";
+  const type = "mock";
   const [profil, setProfil] = useState("");
 
   useEffect(() => {

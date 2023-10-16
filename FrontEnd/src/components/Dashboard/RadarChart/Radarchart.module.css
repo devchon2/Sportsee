@@ -2,10 +2,10 @@
   display: flex;
   background-color: #000;
   border-radius: 15px;
-  width: 25vh !important;
-  height: 25vh !important;
-  max-width: 350px;
-  max-height: 350px;
+  width: 20vw !important;
+  height: 20vw !important;
+  max-width: 330px;
+  max-height: 330px;
   justify-content: center;
   align-items: center;
   padding: 0px;

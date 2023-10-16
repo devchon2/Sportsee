@@ -2,10 +2,10 @@
   background-color: #fbfbfb;
   border-radius: 15px;
   overflow: hidden;
-  width: 25vh !important;
-  height: 25vh !important;
-  max-width: 350px;
-  max-height: 350px;
+  width: 20vw !important;
+  height: 20vw !important;
+  max-width: 330px;
+  max-height: 330px;
 }
 
 .legend {

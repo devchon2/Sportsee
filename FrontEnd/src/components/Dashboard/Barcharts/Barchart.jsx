@@ -56,15 +56,15 @@ export default function BarchartContainer({ activities }) {
     <ResponsiveContainer
       className={style.barchartsContainer}
       width="100%"
-      height="50%"
+      height="45%"
     >
       <BarChart
         className={style.barchart}
         width="100%"
         height="100%"
         data={activities}
-        barGap={2}
-        barSize={10}
+        barGap={5}
+        barSize={5}
         margin={{ top: 20, bottom: 20, left: 20, right: 20 }}
 
       >
