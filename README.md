@@ -132,7 +132,7 @@ npm run seed
 MIT (ajouter `LICENSE` si absent).
 
 ## 📫 Contact
-Rachid Chon — `cgpt1euro@rchon-dev.fr`
+Rachid Chon — `rchon@rchon-dev.fr`
 
 ---
 
